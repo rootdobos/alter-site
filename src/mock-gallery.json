@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "imageUrl": "https://cdn.prod.v2.camping.info/media/campsites/scout-camp-poznan/cMurLXB38Y2i.jpg"
+      },
+  {
+    "id": 2,
+    "imageUrl": "https://media.timeout.com/images/105950033/750/422/image.jpg"
+  },
+  {
+    "id": 3,
+    "imageUrl": "https://a.cdn-hotels.com/gdcs/production109/d1730/0e79ce94-530b-408e-af0f-6550f61d621c.jpg?impolicy=fcrop&w=800&h=533&q=medium"
+  },
+  {
+    "id": 4,
+    "imageUrl": "https://i.guim.co.uk/img/media/dc60c2216c6230eeb2eaf2ffecc6c7452b771820/0_54_4096_2457/master/4096.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=68532136fa2c6a2a3579e9694bc73d2b"
+  },
+  {
+    "id": 5,
+    "imageUrl": "https://offloadmedia.feverup.com/secretldn.com/wp-content/uploads/2021/08/25142838/electricwoodlands21_laurencehowephoto-135.jpg"
+  },
+  {
+    "id": 6,
+    "imageUrl": "https://informatiahr.ro/wp-content/themes/sahifa2/timthumb.php?src=/wp-content/uploads/2022/06/TGBF2.jpg&h=330&w=660&a=c"
+  },
+  {
+    "id": 7,
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY5svsMoFxoF-nJBBbl1hbujmq_kVuC_S9WQ&usqp=CAU"
+  },
+  {
+    "id": 8,
+    "imageUrl": "https://media.timeout.com/images/106096291/image.jpg"
+  }
+]

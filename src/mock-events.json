@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Alternatív Összművészeti Diáktábor",
+    "slug":"alter",
+    "imageUrl": "https://cdn.prod.v2.camping.info/media/campsites/scout-camp-poznan/cMurLXB38Y2i.jpg",
+    "description": "Flexitarian microdosing cloud bread celiac, hell of ascot blog subway tile narwhal art party pug bicycle rights lo-fi kinfolk ennui. Cardigan microdosing vinyl air plant pop-up pug. Blog meh poke, cray paleo deep v cronut iceland ennui ascot. Vegan big mood gastropub swag pabst, man braid art party lomo pitchfork tonx. Cloud bread paleo coloring book, craft beer cray franzen messenger bag kickstarter hoodie cardigan vape street art truffaut forage 90's. Squid pour-over glossier, succulents salvia butcher raw denim bicycle rights tofu waistcoat heirloom lomo shabby chic."
+  },
+  {
+    "id": 2,
+    "title": "AlterZONE",
+    "slug":"alterzone",
+    "imageUrl": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F68535ecc-ec11-11ec-b47a-cf598c451bbb.jpg?crop=3594%2C2022%2C0%2C187&resize=1200",
+    "description": "Powder chupa chups pudding lollipop apple pie pastry gingerbread carrot cake shortbread. Wafer candy pudding toffee halvah. Jelly-o soufflé jelly cheesecake oat cake. Cake sweet marzipan pudding cupcake candy candy canes cookie. Soufflé candy canes chocolate cake sweet tart cookie. Marzipan brownie gummies dragée brownie topping. Powder bear claw pastry ice cream gummies gummies dragée chocolate. Pudding cotton candy danish carrot cake caramels."
+  },
+  {
+    "id": 3,
+    "title": "Miccsezés a Micsun",
+    "slug":"miccsezes",
+    "imageUrl": "https://www.chefspencil.com/wp-content/uploads/Mititei-Mici.jpg",
+    "description":"Society hatred justice suicide free. Ubermensch strong christian love good intentions. Evil zarathustra holiest pinnacle dead derive ocean inexpedient enlightenment hatred burying inexpedient. Insofar dead horror contradict evil eternal-return."
+  }
+]
