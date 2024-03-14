@@ -1,0 +1,13 @@
+.event-list-item{
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 2px solid black;
+    img{
+        margin: 20px;
+        width: 30%;
+    }
+    align-items: center;
+}

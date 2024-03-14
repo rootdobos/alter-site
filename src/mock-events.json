@@ -2,22 +2,34 @@
   {
     "id": 1,
     "title": "Alternatív Összművészeti Diáktábor",
-    "slug":"alter",
-    "imageUrl": "https://cdn.prod.v2.camping.info/media/campsites/scout-camp-poznan/cMurLXB38Y2i.jpg",
+    "slug": "alter",
+    "imageUrl": [
+      "https://cdn.prod.v2.camping.info/media/campsites/scout-camp-poznan/cMurLXB38Y2i.jpg",
+      "https://cdn.thewirecutter.com/wp-content/media/2022/06/summer-camp-2048px-1199232997-2x1-1.jpg?auto=webp&quality=75&crop=2:1&width=1024",
+      "https://gdb.rferl.org/7B99E979-1281-4B2E-96ED-13AB77D44509_w974_n_s.jpg"
+    ],
     "description": "Flexitarian microdosing cloud bread celiac, hell of ascot blog subway tile narwhal art party pug bicycle rights lo-fi kinfolk ennui. Cardigan microdosing vinyl air plant pop-up pug. Blog meh poke, cray paleo deep v cronut iceland ennui ascot. Vegan big mood gastropub swag pabst, man braid art party lomo pitchfork tonx. Cloud bread paleo coloring book, craft beer cray franzen messenger bag kickstarter hoodie cardigan vape street art truffaut forage 90's. Squid pour-over glossier, succulents salvia butcher raw denim bicycle rights tofu waistcoat heirloom lomo shabby chic."
   },
   {
     "id": 2,
     "title": "AlterZONE",
-    "slug":"alterzone",
-    "imageUrl": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F68535ecc-ec11-11ec-b47a-cf598c451bbb.jpg?crop=3594%2C2022%2C0%2C187&resize=1200",
+    "slug": "alterzone",
+    "imageUrl": [
+      "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F68535ecc-ec11-11ec-b47a-cf598c451bbb.jpg?crop=3594%2C2022%2C0%2C187&resize=1200",
+      "https://media.szekelyhon.ro/pictures/kronika/szines/b_openstage.jpg",
+      "https://hellomagyar.hu/wp-content/uploads/2021/10/A-Miko-var.jpg"
+    ],
     "description": "Powder chupa chups pudding lollipop apple pie pastry gingerbread carrot cake shortbread. Wafer candy pudding toffee halvah. Jelly-o soufflé jelly cheesecake oat cake. Cake sweet marzipan pudding cupcake candy candy canes cookie. Soufflé candy canes chocolate cake sweet tart cookie. Marzipan brownie gummies dragée brownie topping. Powder bear claw pastry ice cream gummies gummies dragée chocolate. Pudding cotton candy danish carrot cake caramels."
   },
   {
     "id": 3,
     "title": "Miccsezés a Micsun",
-    "slug":"miccsezes",
-    "imageUrl": "https://www.chefspencil.com/wp-content/uploads/Mititei-Mici.jpg",
-    "description":"Society hatred justice suicide free. Ubermensch strong christian love good intentions. Evil zarathustra holiest pinnacle dead derive ocean inexpedient enlightenment hatred burying inexpedient. Insofar dead horror contradict evil eternal-return."
+    "slug": "miccsezes",
+    "imageUrl": [
+      "https://www.chefspencil.com/wp-content/uploads/Mititei-Mici.jpg",
+      "https://pizzagepex.ro/wp-content/uploads/2018/08/Mici-e1669383533452.jpg",
+      "https://media.szekelyhon.ro/pictures/csik/aktualis/2021/08_majus/o_martonaron-fogimnazium-m2p-pnt.jpg"
+    ],
+    "description": "Society hatred justice suicide free. Ubermensch strong christian love good intentions. Evil zarathustra holiest pinnacle dead derive ocean inexpedient enlightenment hatred burying inexpedient. Insofar dead horror contradict evil eternal-return."
   }
 ]
