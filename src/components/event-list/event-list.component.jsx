@@ -4,8 +4,8 @@ import "./event-list.styles.scss"
 const EventList = () => {
   return (
     <div className="event-list-container">
-      {mockEvents.map((eventItem) => (
-                <EventListItem key={eventItem.id} eventListItem={eventItem} />
+      {mockEvents.map((eventItem,index) => (
+                <EventListItem key={eventItem.id} eventListItem={eventItem} colorStyle={((index%2===0) ? 'black' : 'white')+"-event-list-item"}/>
 
 
       ))}

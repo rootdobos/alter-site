@@ -1,13 +1,35 @@
 .event-list-item{
-    width: 80%;
+    width: 100%;
+    // height: 90vh;
     text-align: center;
     display: flex;
     flex-direction: column;
-    border-radius: 20px;
-    border: 2px solid black;
+    // border-radius: 20px;
+    // border: 2px solid black;
     img{
         margin: 20px;
         width: 30%;
     }
     align-items: center;
+    padding: 20px;
+}
+.event-list-item-details{
+    width: 80%;
+    h3{
+        font-size: 3rem;
+        font-weight: 700;
+
+    }
+    p{
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+}
+.black-event-list-item{
+    color:white;
+    background:black;
+}
+.white-event-list-item{
+    color:black;
+    background:white;
 }
