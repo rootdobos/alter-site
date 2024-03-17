@@ -1,0 +1,23 @@
+.event-details-container{
+    color:white;
+    background:black;
+
+    display: flex;
+    flex-direction: column;
+    padding: 0 60px;
+    h3{
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    p{
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    .event-detail-carousel{
+        width: 75%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
