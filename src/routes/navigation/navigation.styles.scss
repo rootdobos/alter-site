@@ -1,49 +1,105 @@
-
-.navigation{
+.navigation {
   height: 70px;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin:0;
+  align-items: center;
+  margin: 0;
   padding: 0 40px;
   box-sizing: border-box;
   background: rgb(249, 247, 247);
 }
-.logo-container{
+.logo-container {
   height: 92%;
   box-sizing: border-box;
   // width:65px;
-  margin: 2px 25px ;
+  margin: 2px 25px;
 }
-.main-logo{
+.main-logo {
   //box-sizing: border-box;
-  height:100%;
+  height: 100%;
   width: 100%;
   padding: 0;
-  margin:0;
+  margin: 0;
 }
-.navlinks{
+.navlink{
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0, 0, 1, 1);
+    text-align: center;
+    background: black;
+    color: rgb(249, 247, 247);
+    &:hover {
+      background: rgb(249, 247, 247);
+      color: black;
+    }
+}
+.navlinks-horizontal {
   width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  .navlink {
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 30px;
+  }
 }
-.navlink{
-  padding: 10px 15px;
-  margin: 10px;
-  background: black;
-  color: rgb(249, 247, 247);
-  cursor: pointer;
+.navlinks-vertical {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  padding: 20px 0;
+  top: 70px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 5;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  .navlink {
+    padding: 10px 15px;
+    width: 100%;
+    margin: 10px;
+  }
+}
+
+.navbar-button {
+  display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+  height: 30px;
+  background: black;
   border-radius: 30px;
-  // transition-property: background;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0, 0, 1, 1);
+  cursor: pointer;
+  button {
+    background: none;
+    color: white;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
     transition-duration: 200ms;
     transition-timing-function: cubic-bezier(0, 0, 1, 1);
-
-  &:hover{
+  }
+  &:hover {
     background: rgb(249, 247, 247);
+    button{
+
     color: black;
+    }
   }
 }
