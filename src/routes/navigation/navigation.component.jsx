@@ -1,6 +1,6 @@
 import { Fragment, useState } from "react";
 import { Outlet, Link } from "react-router-dom";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.svg";
 import "./navigation.styles.scss";
 import { Menu, X } from "lucide-react";
 import { useMediaQuery, useMediaQueries } from "@react-hook/media-query";
@@ -35,6 +35,9 @@ const Navigation = () => {
             </Link>
             <Link className="navlink" to="/aboutus">
               Rólunk
+            </Link>
+            <Link className="navlink" to="/test">
+              Test
             </Link>
           </div>
         )}

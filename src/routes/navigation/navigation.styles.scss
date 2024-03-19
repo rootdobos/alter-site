@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0 40px;
   box-sizing: border-box;
-  background: rgb(249, 247, 247);
+  background: #293241;
 }
 .logo-container {
   height: 92%;
@@ -27,13 +27,14 @@
   justify-content: center;
   align-items: center;
   transition-duration: 200ms;
+  border-radius: 30px;
     transition-timing-function: cubic-bezier(0, 0, 1, 1);
     text-align: center;
-    background: black;
-    color: rgb(249, 247, 247);
+    background: #E0F1F8;
+    color: black;
     &:hover {
-      background: rgb(249, 247, 247);
-      color: black;
+      background: #293241;
+      color: white;
     }
 }
 .navlinks-horizontal {
@@ -46,26 +47,25 @@
   .navlink {
     padding: 10px 15px;
     margin: 10px;
-    border-radius: 30px;
+   
   }
 }
 .navlinks-vertical {
   position: absolute;
   width: 200px;
-  height: 300px;
   padding: 20px 0;
   top: 70px;
   right: 20px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   z-index: 5;
 
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  // box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  //   rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+  //   rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   .navlink {
     padding: 10px 15px;
     width: 100%;
@@ -79,7 +79,7 @@
   align-items: center;
   padding: 20px;
   height: 30px;
-  background: black;
+  background: #293241;
   border-radius: 30px;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0, 0, 1, 1);
@@ -96,7 +96,7 @@
     transition-timing-function: cubic-bezier(0, 0, 1, 1);
   }
   &:hover {
-    background: rgb(249, 247, 247);
+    background: #E0F1F8;
     button{
 
     color: black;
