@@ -1,3 +1,29 @@
-.main-page-tile{
-    color:white;
+.main-page-tile {
+  color: white;
+  height: 400px;
+  width: 250px;
+
+  background-color: #e0f1f82c;
+  border: 1px solid #e0f1f82c;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  transform: scale(1);
+  transition: 0.2s ease-in-out;
+  &:hover {
+    height: 450px;
+    width: 300px;
+    box-shadow: #e0f1f82c 0px 50px 100px -20px, #e0f1f82c 0px 30px 60px -30px,
+      #e0f1f82c 0px -2px 6px 0px inset;
+  }
+}
+.unfocused-main-page-tile {
+  //opacity: 0.5;
+  background-color:#2932414f ;
+  box-shadow: #2932414f 0px -2px 6px 0px inset;
 }

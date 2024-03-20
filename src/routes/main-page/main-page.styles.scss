@@ -1,5 +1,9 @@
 .main-page {
   display: flex;
+  flex-wrap: wrap;
   background: black;
-  height: 100vh;
+  gap: 20px;
+  min-height: 100vh;
+  padding: 10vh;
+  justify-content: space-evenly;
 }

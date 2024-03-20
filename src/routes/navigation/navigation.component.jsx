@@ -17,14 +17,16 @@ const Navigation = () => {
         <Link className="logo-container" to="/">
           <img className="main-logo" src={logo} alt="logo" />
         </Link>
-        {!matches &&
+        {!matches && (
           <div onClick={toggleNavbar} className="navbar-button">
-            <button >{isOpen ? <X size={30} /> : <Menu size={30} />}</button>
+            <button>{isOpen ? <X size={30} /> : <Menu size={30} />}</button>
           </div>
-        }
+        )}
         {(matches || isOpen) && (
-          <div className={matches ? "navlinks-horizontal": "navlinks-vertical"}>
-            <Link className="navlink" to="/">
+          <div
+            className={matches ? "navlinks-horizontal" : "navlinks-vertical"}
+          >
+            <Link className="navlink" to="/main">
               Főoldal
             </Link>
             <Link className="navlink" to="/events">
