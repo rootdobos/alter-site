@@ -1,10 +1,11 @@
-import MainTitle from "../../components/main-title/main-title.component"
-import "./main-page.styles.scss"
-import pages from "../../pages.json";
-import MainPageTile from "../../components/main-page-tile/main-page-tile.component";
-import { useState } from "react";
 
+import "./main-page.styles.scss"
+//import pages from "../../pages.json";
+import MainPageTile from "../../components/main-page-tile/main-page-tile.component";
+import { useState,useContext } from "react";
+import { AppDataContext } from "../../contexts/pages/app-data.context";
 const MainPage=()=>{
+    const {pages}=useContext(AppDataContext)
     const [selected,setSelected]=useState("none");
     return (
         <div className="main-page">

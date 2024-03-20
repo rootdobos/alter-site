@@ -1,11 +1,12 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 import "./navigation.styles.scss";
 import { Menu, X } from "lucide-react";
 import { useMediaQuery, useMediaQueries } from "@react-hook/media-query";
-
+import { AppDataContext } from "../../contexts/pages/app-data.context";
 const Navigation = () => {
+  const { pages } = useContext(AppDataContext);
   const [isOpen, setIsOpen] = useState(false);
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -29,18 +30,13 @@ const Navigation = () => {
             <Link className="navlink" to="/main">
               Főoldal
             </Link>
-            <Link className="navlink" to="/events">
-              Rendezvényeink
-            </Link>
-            <Link className="navlink" to="/gallery">
-              Galéria
-            </Link>
-            <Link className="navlink" to="/aboutus">
-              Rólunk
-            </Link>
-            <Link className="navlink" to="/test">
-              Test
-            </Link>
+            {pages.map((page, index) => {
+              return (
+                <Link className="navlink" to={page.link}>
+                  {page.title}
+                </Link>
+              );
+            })}
           </div>
         )}
       </div>

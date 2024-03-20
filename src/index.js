@@ -6,13 +6,15 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 
 import reportWebVitals from "./reportWebVitals";
-
+import { AppDataProvider } from "./contexts/pages/app-data.context";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
+    <BrowserRouter>
+      <AppDataProvider>
+        <App />
+      </AppDataProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

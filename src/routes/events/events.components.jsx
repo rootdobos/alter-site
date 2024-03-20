@@ -5,6 +5,7 @@ import EventDetails from "../../components/event-details/event-details.component
 const Events = ()=>{
     return <Routes>
       <Route index element={<EventList />} />
+      
       <Route path=":slug" element={<EventDetails />} />
     </Routes>
 
