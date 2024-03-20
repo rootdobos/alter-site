@@ -32,7 +32,7 @@ const Navigation = () => {
             </Link>
             {pages.map((page, index) => {
               return (
-                <Link className="navlink" to={page.link}>
+                <Link key={index} className="navlink" to={page.link}>
                   {page.title}
                 </Link>
               );
