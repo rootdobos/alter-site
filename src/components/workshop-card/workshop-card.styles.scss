@@ -1,0 +1,17 @@
+.workshop-card{
+    height: 300px;
+    width: 300px;
+    margin:30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img{
+        height: 80%;
+    }
+    h4{
+        margin:10px;
+        font-size: 30px;
+        font-weight: 700;
+    }
+}
