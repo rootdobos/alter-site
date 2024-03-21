@@ -4,7 +4,7 @@ import logo from "../../assets/logo.svg";
 import "./navigation.styles.scss";
 import { Menu, X } from "lucide-react";
 import { useMediaQuery, useMediaQueries } from "@react-hook/media-query";
-import { AppDataContext } from "../../contexts/pages/app-data.context";
+import { AppDataContext } from "../../contexts/app-data/app-data.context";
 const Navigation = () => {
   const { pages } = useContext(AppDataContext);
   const [isOpen, setIsOpen] = useState(false);

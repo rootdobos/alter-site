@@ -1,15 +1,14 @@
-
-import "./main-page.styles.scss"
+import "./main-page.styles.scss";
 //import pages from "../../pages.json";
 import MainPageTile from "../../components/main-page-tile/main-page-tile.component";
-import { useState,useContext } from "react";
-import { AppDataContext } from "../../contexts/pages/app-data.context";
-const MainPage=()=>{
-    const {pages}=useContext(AppDataContext)
-    const [selected,setSelected]=useState("none");
-    return (
-        <div className="main-page">
-             {pages.map((page, index) => (
+import { useState, useContext } from "react";
+import { AppDataContext } from "../../contexts/app-data/app-data.context";
+const MainPage = () => {
+  const { pages } = useContext(AppDataContext);
+  const [selected, setSelected] = useState("none");
+  return (
+    <div className="main-page">
+      {pages.map((page, index) => (
         <MainPageTile
           key={page.id}
           item={page}
@@ -17,9 +16,8 @@ const MainPage=()=>{
           setSelected={setSelected}
         />
       ))}
+    </div>
+  );
+};
 
-        </div>
-    )
-}
-
-export default MainPage
+export default MainPage;

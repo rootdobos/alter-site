@@ -2,19 +2,24 @@ import { createContext, useEffect, useReducer } from "react";
 import { createAction } from "../../utils/reducer/reducer.utils";
 import localPages from "../../pages.json";
 import localEventDetails from "../../mock-events.json";
+import localGallery from "../../mock-gallery.json";
 export const AppDataContext = createContext({
   pages: [],
   setPages: () => {},
   eventDetails: {},
   setEventDetails: () => {},
+  gallery: {},
+  setGallery: () => {},
 });
 const INITIAL_STATE = {
   pages: [],
   eventDetails:{},
+  gallery:[]
 };
 const APPDATA_ACTION_TYPES = {
   SET_PAGES: "SET_PAGES",
   SET_EVENTDETAILS: "SET_EVENTDETAILS",
+  SET_GALLERY: "SET_GALLERY",
 };
 const appDataReducer = (state, action) => {
   const { type, payload } = action;
@@ -30,13 +35,18 @@ const appDataReducer = (state, action) => {
         ...state,
         ...payload,
       };
+      case APPDATA_ACTION_TYPES.SET_GALLERY:
+        return {
+          ...state,
+          ...payload,
+        };
     default:
       throw new Error(`Unhandled type ${type} in appdataReducer`);
   }
 };
 
 export const AppDataProvider = ({ children }) => {
-  const [{ pages,eventDetails }, dispatch] = useReducer(appDataReducer, INITIAL_STATE);
+  const [{ pages,eventDetails,gallery }, dispatch] = useReducer(appDataReducer, INITIAL_STATE);
   const setPages = (newPages) => {
     dispatch(
       createAction(APPDATA_ACTION_TYPES.SET_PAGES, {
@@ -51,13 +61,21 @@ export const AppDataProvider = ({ children }) => {
       })
     );
   };
+  const setGallery = (newGallery) => {
+    dispatch(
+      createAction(APPDATA_ACTION_TYPES.SET_GALLERY, {
+        gallery: newGallery,
+      })
+    );
+  };
   useEffect(() => {
     const getAppData = async () => {
       const pages = localPages;
       setPages(pages);
       const eventDetails=localEventDetails;
       setEventDetails(eventDetails);
-      console.log("effect used")
+      const gallery=localGallery;
+      setGallery(gallery);
     };
     getAppData();
   }, []);
@@ -66,7 +84,9 @@ export const AppDataProvider = ({ children }) => {
     pages,
     setPages,
     eventDetails,
-    setEventDetails
+    setEventDetails,
+    gallery,
+    setGallery
   };
   return (
     <AppDataContext.Provider value={value}>{children}</AppDataContext.Provider>

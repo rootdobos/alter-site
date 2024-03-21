@@ -1,12 +1,14 @@
-import mockGallery from "../../mock-gallery.json";
 import { ImageGallery } from "react-image-grid-gallery";
 import "./gallery.styles.scss"
+import { useContext } from "react";
+import { AppDataContext } from "../../contexts/app-data/app-data.context";
 const Gallery = () => {
-  const photos = mockGallery.map((item, i) => ({
+
+  const {gallery}= useContext(AppDataContext);
+  const photos = gallery.map((item, i) => ({
     src: item.imageUrl,
     alt: `Image ${i + 1}`,
   }));
-  console.log(photos);
   return (
     <div className="gallery-item">
       <ImageGallery imagesInfoArray={photos} 
