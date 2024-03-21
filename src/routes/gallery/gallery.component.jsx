@@ -2,23 +2,17 @@ import { ImageGallery } from "react-image-grid-gallery";
 import "./gallery.styles.scss"
 import { useContext } from "react";
 import { AppDataContext } from "../../contexts/app-data/app-data.context";
+import GalleryTile from "../../components/gallery-tile/gallery-tile.component";
+import GalleryTileContainer from "../../components/gallery-tile-container/gallery-tile-container.component";
+import { Route,Routes } from "react-router";
 const Gallery = () => {
 
-  const {gallery}= useContext(AppDataContext);
-  const photos = gallery.map((item, i) => ({
-    src: item.imageUrl,
-    alt: `Image ${i + 1}`,
-  }));
-  return (
-    <div className="gallery-item">
-      <ImageGallery imagesInfoArray={photos} 
-      columnWidth={530} gapSize={36}
-      />
-      {/* {mockGallery.map((item) => (
-        <img src={item.imageUrl} key={item.id} alt="" />
-      ))} */}
-    </div>
-  );
+  return <Routes>
+  <Route index element={<GalleryTileContainer />} />
+  
+  <Route path=":slug" element={<GalleryTileContainer />} />
+</Routes>
+
 };
 
 export default Gallery;

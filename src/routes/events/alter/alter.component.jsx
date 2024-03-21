@@ -7,7 +7,7 @@ import { useViewport } from "react-viewport-hooks";
 import WorkShopCard from "../../../components/workshop-card/workshop-card.component";
 const Alter = () => {
   const { eventDetails } = useContext(AppDataContext);
-  const { wh, vw } = useViewport();
+  const { vw } = useViewport();
   const scale = 0.7;
   const eventData = eventDetails["alter"];
   const workshops = eventData && eventData["workshops"];
