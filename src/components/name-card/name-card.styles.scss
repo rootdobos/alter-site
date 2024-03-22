@@ -1,0 +1,14 @@
+.name-card{
+    width: 400px;
+    height: 200px;
+    display: flex;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    img{
+        width: 100%;
+    }
+    .contact-info{
+        flex: 1;
+    }
+}

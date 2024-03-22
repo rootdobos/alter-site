@@ -7,6 +7,7 @@ import Gallery from "./routes/gallery/gallery.component";
 import AboutUs from "./routes/about-us/about-us.component";
 import ScrollToTop from "./utils/ui/scrollToTop";
 import GalleryPreview from "./routes/gallery-preview/gallery-preview.component";
+import Contact from "./routes/contact/contact.component";
 
 const App = () => {
   return (
@@ -16,10 +17,10 @@ const App = () => {
         <Route index element={<MainTitle />} />
         <Route path="main" element={<MainPage />} />
         <Route path="/" element={<Navigation />}>
-         
           <Route path="events/*" element={<Events />} />
           <Route path="gallery/*" element={<Gallery />} />
           <Route path="aboutus" element={<AboutUs />} />
+          <Route path="contact" element={<Contact />} />
           <Route path="test" element={<GalleryPreview />} />
         </Route>
       </Routes>
