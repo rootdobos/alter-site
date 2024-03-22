@@ -33,7 +33,6 @@ const GalleryTile = ({ id, data, innerlink, viewHandler }) => {
                 src={data.tumblr}
                 className="img-bg"
                 alt=""
-                style={{ display: loading ? "none" : "block" }}
               />
               <h4>{data.title}</h4>
             </>
