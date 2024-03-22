@@ -29,11 +29,7 @@ const GalleryTile = ({ id, data, innerlink, viewHandler }) => {
         >
           {inView ? (
             <>
-              <img
-                src={data.tumblr}
-                className="img-bg"
-                alt=""
-              />
+              <img src={data.tumblr} className="img-bg" alt="" />
               <h4>{data.title}</h4>
             </>
           ) : (

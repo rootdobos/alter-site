@@ -6,18 +6,13 @@ import { useContext, useState } from "react";
 import { getItemBySlug, slugify } from "../../utils/utils";
 
 import GalleryTile from "../gallery-tile/gallery-tile.component";
+import { useSwipeable } from "react-swipeable";
 
 const GalleryTileContainer = () => {
   const { gallery } = useContext(AppDataContext);
   const { slug } = useParams();
   const [ openedImage, setOpenedImage ] = useState();
-  if (gallery.length === 0) {
-    return <div className="gallery-tile-container"></div>;
-  }
-  let items = gallery;
-  if (slug) {
-    items = getItemBySlug(gallery, slug);
-  }
+  
   const largeImageViewHandler = (id) => {
     setOpenedImage(id)
   };
@@ -30,7 +25,7 @@ const GalleryTileContainer = () => {
     {
       setOpenedImage((x)=>x-1)
     }
-    event.stopPropagation();
+    event?.stopPropagation();
   }
   const increaseOpenedImageID=(event)=>{
     
@@ -38,7 +33,18 @@ const GalleryTileContainer = () => {
     {
       setOpenedImage((x)=>x+1)
     }
-    event.stopPropagation();
+    event?.stopPropagation();
+  }
+  const swipeHandlers=useSwipeable({
+    onSwipedLeft:(e)=> decreaseOpenedImageID(),
+    onSwipedRight:(e)=> increaseOpenedImageID(),
+  })
+  if (gallery.length === 0) {
+    return <div className="gallery-tile-container"></div>;
+  }
+  let items = gallery;
+  if (slug) {
+    items = getItemBySlug(gallery, slug);
   }
   const previousLink = slug ? `${slug}-` : "";
   //return <></>
@@ -46,7 +52,7 @@ const GalleryTileContainer = () => {
     <>
       {openedImage!==undefined && <div className="opened-image" onClick={closeOpenedImage}>
         <button onClick={decreaseOpenedImageID}>{"<"}</button>
-        <img src={items[openedImage]} alt="" />
+        <img {...swipeHandlers} src={items[openedImage]} alt="" />
         <button onClick={increaseOpenedImageID}>{">"}</button>
         </div>}
 
