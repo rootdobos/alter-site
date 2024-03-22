@@ -1,9 +1,12 @@
 import "./gallery-tile-container.styles.scss";
-import GalleryTile from "../gallery-tile/gallery-tile.component";
+//import GalleryTile from "../gallery-tile/gallery-tile.component";
 import { useParams } from "react-router";
 import { AppDataContext } from "../../contexts/app-data/app-data.context";
 import { useContext, useState } from "react";
 import { getItemBySlug, slugify } from "../../utils/utils";
+
+import GalleryTile from "../gallery-tile/gallery-tile.component";
+
 const GalleryTileContainer = () => {
   const { gallery } = useContext(AppDataContext);
   const { slug } = useParams();

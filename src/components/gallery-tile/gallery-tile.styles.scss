@@ -24,8 +24,12 @@
     height: 100%;
     object-fit: cover;
   }
-  
+
 }
+// .not-inview{
+//   height: 0px;
+//   width: 0px;
+// }
 .menu-gallery-tile{
   height: calc(90px * 2.5);
   width: calc(160px * 2.5);

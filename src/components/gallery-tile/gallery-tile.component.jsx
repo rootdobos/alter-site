@@ -1,24 +1,74 @@
 import { slugify } from "../../utils/utils";
 import "./gallery-tile.styles.scss";
 import { useNavigate } from "react-router";
-const GalleryTile = ({id, data, innerlink,viewHandler }) => {
+import { useInView } from "react-intersection-observer";
+import { useState } from "react";
+import SkewLoader from "react-spinners/SkewLoader";
+const GalleryTile = ({ id, data, innerlink, viewHandler }) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const goToGalleryHandler = () => {
     navigate(`/gallery/${innerlink}`);
   };
-  const onImageClickHandler=()=>{
-    viewHandler(id)
-  }
+  const onImageClickHandler = () => {
+    viewHandler(id);
+  };
+  const onImageLoaded = () => {
+    setLoading(false);
+  };
   return (
     <>
       {data.title ? (
-        <div className="gallery-tile menu-gallery-tile" onClick={goToGalleryHandler}>
-          <img src={data.tumblr} className="img-bg" alt="" />
-          <h4>{data.title}</h4>
+        <div
+          ref={ref}
+          className="gallery-tile menu-gallery-tile"
+          onClick={goToGalleryHandler}
+        >
+          {inView ? (
+            <>
+              <img
+                src={data.tumblr}
+                className="img-bg"
+                alt=""
+                style={{ display: loading ? "none" : "block" }}
+              />
+              <h4>{data.title}</h4>
+            </>
+          ) : (
+            <>
+              <h4>LOADING</h4>
+            </>
+          )}
         </div>
       ) : (
-        <div className="gallery-tile" onClick={onImageClickHandler}>
-          <img src={data} className="img-bg" alt="" />
+        <div ref={ref} className="gallery-tile" onClick={onImageClickHandler}>
+          {inView ? (
+            <>
+              <div style={{ display: loading ? "block" : "none" }}>
+                <SkewLoader
+                  color={"#E0F1F8"}
+                  loading={loading}
+                  size={30}
+                  aria-label="Loading Spinner"
+                  data-testid="loader"
+                />
+              </div>
+              <img
+                src={data + `?${id}`}
+                className="img-bg"
+                alt=""
+                onLoad={onImageLoaded}
+                style={{ display: loading ? "none" : "block" }}
+              />
+            </>
+          ) : (
+            <>
+              <h4>LOADING</h4>
+            </>
+          )}
         </div>
       )}
     </>

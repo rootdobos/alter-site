@@ -12,6 +12,8 @@ export const slugify=(str)=> {
 export const getItemBySlug=(dict, slug)=>{
   const slugParts=slug.split('-')
   let result=dict
+  if(dict.length===0)
+    return []
   slugParts.forEach((sp)=>{
     result=result.filter((data)=>slugify(data.title)===sp)[0]
     if(result.data){
