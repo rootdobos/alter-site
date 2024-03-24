@@ -1,7 +1,11 @@
+import MemberCard from "../../components/member-card/member-card.component";
+import { AppDataContext } from "../../contexts/app-data/app-data.context";
+import { useContext } from "react";
 const AboutUs = () => {
+  const { members } = useContext(AppDataContext);
   return (
     <div className="about-us">
-      <h3>Rólunk</h3>
+      <h3>A Szervezet</h3>
       <p>
         My capacity is full introduccion the closest elephant is the most
         dangerous UX. Big data hammer out get all your ducks in a row.
@@ -48,6 +52,30 @@ const AboutUs = () => {
         src="https://png.pngtree.com/background/20230611/original/pngtree-group-of-monkeys-sitting-on-tree-picture-image_3159383.jpg"
         alt=""
       />
+      <div className="vision">
+        <h3>Víziónk</h3>
+        <p>Mit kíván a magyar nemzet. Legyen béke, szabadság és egyetértés.</p>
+        <ul>
+          <li>1. Kívánjuk a sajtó szabadságát, censura eltörlését.</li>
+          <li>2. Felelős ministeriumot Buda-Pesten.</li>
+          <li>3. Évenkinti országgyűlést Pesten</li>
+          <li>4. Törvény előtti egyenlőséget polgári és vallási tekintetben.</li>
+          <li>5. Nemzeti őrsereg.</li>
+          <li>6. Közös teherviselés.</li>
+          <li>7. Úrbéri viszonyok megszűntetése.</li>
+          <li>8. Esküdtszék, képviselet egyenlőség alapján.</li>
+          <li>9. Nemzeti Bank.</li>
+          <li>10. A katonaság esküdjék meg az alkotmányra, magyar katonáinkat ne vigyék külföldre, a külföldieket vigyék el tőlünk.</li>
+          <li>11. A politikai statusfoglyok szabadon bocsátassanak.</li>
+          <li>12. Unio.</li>
+        </ul>
+        <p>Egyenlőség, szabadság, testvériség!</p>
+      </div>
+      <div className="members">
+        {members.map((member) => (
+          <MemberCard key={member.id} member={member} />
+        ))}
+      </div>
     </div>
   );
 };

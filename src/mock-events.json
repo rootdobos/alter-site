@@ -90,7 +90,24 @@
       "https://media.szekelyhon.ro/pictures/kronika/szines/b_openstage.jpg",
       "https://hellomagyar.hu/wp-content/uploads/2021/10/A-Miko-var.jpg"
     ],
-    "description": "Powder chupa chups pudding lollipop apple pie pastry gingerbread carrot cake shortbread. Wafer candy pudding toffee halvah. Jelly-o soufflé jelly cheesecake oat cake. Cake sweet marzipan pudding cupcake candy candy canes cookie. Soufflé candy canes chocolate cake sweet tart cookie. Marzipan brownie gummies dragée brownie topping. Powder bear claw pastry ice cream gummies gummies dragée chocolate. Pudding cotton candy danish carrot cake caramels."
+    "description": "Powder chupa chups pudding lollipop apple pie pastry gingerbread carrot cake shortbread. Wafer candy pudding toffee halvah. Jelly-o soufflé jelly cheesecake oat cake. Cake sweet marzipan pudding cupcake candy candy canes cookie. Soufflé candy canes chocolate cake sweet tart cookie. Marzipan brownie gummies dragée brownie topping. Powder bear claw pastry ice cream gummies gummies dragée chocolate. Pudding cotton candy danish carrot cake caramels.",
+    "programs": [
+      {"title":"Program 1",
+    "image":"https://source.unsplash.com/800x450",
+    "description":"Bacon ipsum dolor amet ribeye filet mignon sirloin tongue burgdoggen, beef ribs ham hock. Ball tip porchetta swine salami ground round doner ham. Prosciutto pork chop shankle fatback alcatra, pancetta brisket beef ribs. Chicken ham fatback sirloin. T-bone pastrami biltong ham hock, shoulder rump jerky drumstick chislic short loin ground round boudin strip steak."},
+    {"title":"Program 2",
+    "image":"https://source.unsplash.com/800x450",
+    "description":"Bacon ipsum dolor amet ribeye filet mignon sirloin tongue burgdoggen, beef ribs ham hock. Ball tip porchetta swine salami ground round doner ham. Prosciutto pork chop shankle fatback alcatra, pancetta brisket beef ribs. Chicken ham fatback sirloin. T-bone pastrami biltong ham hock, shoulder rump jerky drumstick chislic short loin ground round boudin strip steak."},
+    {"title":"Program 3",
+    "image":"https://source.unsplash.com/800x450",
+    "description":"Bacon ipsum dolor amet ribeye filet mignon sirloin tongue burgdoggen, beef ribs ham hock. Ball tip porchetta swine salami ground round doner ham. Prosciutto pork chop shankle fatback alcatra, pancetta brisket beef ribs. Chicken ham fatback sirloin. T-bone pastrami biltong ham hock, shoulder rump jerky drumstick chislic short loin ground round boudin strip steak."},
+    {"title":"Program 4",
+    "image":"https://source.unsplash.com/800x450",
+    "description":"Bacon ipsum dolor amet ribeye filet mignon sirloin tongue burgdoggen, beef ribs ham hock. Ball tip porchetta swine salami ground round doner ham. Prosciutto pork chop shankle fatback alcatra, pancetta brisket beef ribs. Chicken ham fatback sirloin. T-bone pastrami biltong ham hock, shoulder rump jerky drumstick chislic short loin ground round boudin strip steak."},
+    {"title":"Program 5",
+    "image":"https://source.unsplash.com/800x450",
+    "description":"Bacon ipsum dolor amet ribeye filet mignon sirloin tongue burgdoggen, beef ribs ham hock. Ball tip porchetta swine salami ground round doner ham. Prosciutto pork chop shankle fatback alcatra, pancetta brisket beef ribs. Chicken ham fatback sirloin. T-bone pastrami biltong ham hock, shoulder rump jerky drumstick chislic short loin ground round boudin strip steak."}
+    ]
   },
   "miccsezes": {
     "id": 3,

@@ -10,16 +10,20 @@ export const AppDataContext = createContext({
   setEventDetails: () => {},
   gallery: {},
   setGallery: () => {},
+  members:[],
+
 });
 const INITIAL_STATE = {
   pages: [],
   eventDetails:{},
-  gallery:[]
+  gallery:{},
+  members:[],
 };
 const APPDATA_ACTION_TYPES = {
   SET_PAGES: "SET_PAGES",
   SET_EVENTDETAILS: "SET_EVENTDETAILS",
   SET_GALLERY: "SET_GALLERY",
+  SET_MEMBERS: "SET_MEMBERS",
 };
 const appDataReducer = (state, action) => {
   const { type, payload } = action;
@@ -40,13 +44,18 @@ const appDataReducer = (state, action) => {
           ...state,
           ...payload,
         };
+        case APPDATA_ACTION_TYPES.SET_MEMBERS:
+          return {
+            ...state,
+            ...payload,
+          };
     default:
       throw new Error(`Unhandled type ${type} in appdataReducer`);
   }
 };
 
 export const AppDataProvider = ({ children }) => {
-  const [{ pages,eventDetails,gallery }, dispatch] = useReducer(appDataReducer, INITIAL_STATE);
+  const [{ pages,eventDetails,gallery,members }, dispatch] = useReducer(appDataReducer, INITIAL_STATE);
   const setPages = (newPages) => {
     dispatch(
       createAction(APPDATA_ACTION_TYPES.SET_PAGES, {
@@ -68,6 +77,13 @@ export const AppDataProvider = ({ children }) => {
       })
     );
   };
+  const setMembers = (newMembers) => {
+    dispatch(
+      createAction(APPDATA_ACTION_TYPES.SET_MEMBERS, {
+        members: newMembers,
+      })
+    );
+  };
   useEffect(() => {
     const getAppData = async () => {
       const pages = localPages;
@@ -77,7 +93,21 @@ export const AppDataProvider = ({ children }) => {
       const gallery=localGallery;
       setGallery(gallery);
     };
+    const getMembers= async()=>{
+        fetch("https://jsonplaceholder.typicode.com/users")
+      .then(response=> response.json())
+      .then((members)=>setMembers(members.map((member)=>{
+        return{name:member.name,
+        id:member.id,
+      email:member.email,
+      phone:member.phone,
+      position: member.company.catchPhrase,
+      image:`https://robohash.org/${member.id}?set=set2&size=180x180`
+    }
+      } )));
+    }
     getAppData();
+    getMembers();
   }, []);
 
   const value = {
@@ -86,7 +116,8 @@ export const AppDataProvider = ({ children }) => {
     eventDetails,
     setEventDetails,
     gallery,
-    setGallery
+    setGallery,
+    members
   };
   return (
     <AppDataContext.Provider value={value}>{children}</AppDataContext.Provider>
