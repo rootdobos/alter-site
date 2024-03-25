@@ -67,11 +67,12 @@ const Alter = () => {
             ))}
           </Carousel>
           <h3>Műhelyek</h3>
-          <div className="workshop-container">
+          <motion.div className="workshop-container"
+           transition={{ staggerChildren: 0.01}}>
             {workshops.map((w, i) => (
               <WorkShopCard key={i} workshop={w} />
             ))}
-          </div>
+          </motion.div>
           <div className="history">
             <h3>Története</h3>
             <HistoryParallax history={eventData.history} />
