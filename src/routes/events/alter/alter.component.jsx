@@ -6,19 +6,53 @@ import { AppDataContext } from "../../../contexts/app-data/app-data.context";
 import { useViewport } from "react-viewport-hooks";
 import WorkShopCard from "../../../components/workshop-card/workshop-card.component";
 import HistoryParallax from "../../../components/history-parallax/history-parallax.compoment";
+import { splitStringUsingRegex } from "../../../utils/ui/motion-helper";
+import { motion, stagger } from "framer-motion";
 const Alter = () => {
   const { eventDetails } = useContext(AppDataContext);
   const { vw } = useViewport();
   const scale = 0.7;
+  const charVariants = {
+    hidden: { opacity: 0 },
+    reveal: { opacity: 1 },
+  };
   const eventData = eventDetails["alter"];
   const workshops = eventData && eventData["workshops"];
-
+  const splittedDescription = splitStringUsingRegex(eventData?.description);
   return (
     <>
       {eventData && (
         <div className="event-details-container">
-          <h3>{eventData.title}</h3>
-          <p>{eventData.description}</p>
+          <motion.h3
+            initial={{ opacity: 0.2, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 200,
+              duration: 1,
+              delay: 0.1,
+            }}
+            viewport={{ once: true }}
+          >
+            {eventData.title}
+          </motion.h3>
+          <motion.p
+            initial="hidden"
+            whileInView="reveal"
+            viewport={{ once: true }}
+            transition={{ staggerChildren: 0.01, delayChildren: 1.1 }}
+          >
+            {splittedDescription.map((char) => (
+              <motion.span
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                variants={charVariants}
+                key={char}
+              >
+                {char}
+              </motion.span>
+            ))}
+          </motion.p>
           <Carousel
             className="event-detail-carousel"
             infiniteLoop={true}
@@ -38,9 +72,9 @@ const Alter = () => {
               <WorkShopCard key={i} workshop={w} />
             ))}
           </div>
-          <div className="history"> 
-          <h3>Története</h3>
-          <HistoryParallax history={eventData.history}/>
+          <div className="history">
+            <h3>Története</h3>
+            <HistoryParallax history={eventData.history} />
           </div>
           <div className="videos">
             <iframe
