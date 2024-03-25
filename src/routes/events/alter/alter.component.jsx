@@ -42,12 +42,12 @@ const Alter = () => {
             viewport={{ once: true }}
             transition={{ staggerChildren: 0.01, delayChildren: 1.1 }}
           >
-            {splittedDescription.map((char) => (
+            {splittedDescription.map((char,i) => (
               <motion.span
+              key={`${char}${i}`}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
                 variants={charVariants}
-                key={char}
               >
                 {char}
               </motion.span>
