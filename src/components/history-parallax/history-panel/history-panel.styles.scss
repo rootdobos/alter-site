@@ -1,0 +1,26 @@
+.history-panel{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    min-height: 100%;
+    scroll-snap-align: center;
+    img{
+        width: 35vw;
+        height: 80%;
+    }
+    .history-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        margin-left:30px ;
+
+        h4{
+            font-size: 3em;
+            margin-top: 0;
+        }
+        p{
+            width: auto;
+            margin:0
+        }
+    }
+}

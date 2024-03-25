@@ -4,6 +4,23 @@ import { useNavigate } from "react-router";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
 import SkewLoader from "react-spinners/SkewLoader";
+
+import { motion, Variants } from "framer-motion";
+
+const cardVariants = {
+  offscreen: {
+    y: 300,
+  },
+  onscreen: {
+    y: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
+
 const GalleryTile = ({ id, data, innerlink, viewHandler }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -39,7 +56,15 @@ const GalleryTile = ({ id, data, innerlink, viewHandler }) => {
           )}
         </div>
       ) : (
-        <div ref={ref} className="gallery-tile" onClick={onImageClickHandler}>
+        <motion.div
+          ref={ref}
+          className="gallery-tile"
+          onClick={onImageClickHandler}
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.8 }}
+          variants={cardVariants}
+        >
           {inView ? (
             <>
               <div style={{ display: loading ? "block" : "none" }}>
@@ -64,7 +89,7 @@ const GalleryTile = ({ id, data, innerlink, viewHandler }) => {
               <h4>LOADING</h4>
             </>
           )}
-        </div>
+        </motion.div>
       )}
     </>
   );

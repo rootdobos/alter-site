@@ -44,6 +44,8 @@ const GalleryTileContainer = () => {
   }
   let items = gallery;
   if (slug) {
+    console.log(gallery)
+    console.log(slug)
     items = getItemBySlug(gallery, slug);
   }
   const previousLink = slug ? `${slug}-` : "";

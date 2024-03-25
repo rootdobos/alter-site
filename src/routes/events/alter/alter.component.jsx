@@ -5,30 +5,14 @@ import { useContext } from "react";
 import { AppDataContext } from "../../../contexts/app-data/app-data.context";
 import { useViewport } from "react-viewport-hooks";
 import WorkShopCard from "../../../components/workshop-card/workshop-card.component";
+import HistoryParallax from "../../../components/history-parallax/history-parallax.compoment";
 const Alter = () => {
   const { eventDetails } = useContext(AppDataContext);
   const { vw } = useViewport();
   const scale = 0.7;
   const eventData = eventDetails["alter"];
   const workshops = eventData && eventData["workshops"];
-  // return (
-  //   <>
-  //     {eventData && (
-  //       <Parallax
-  //         pages={2}
-  //         style={{ top: "0", left: "0" }}
-  //         className="event-details-container"
-  //       >
-  //         <ParallaxLayer offset={0} speed={1}>
-  //           <h3>{eventData["title"]}</h3>
-  //         </ParallaxLayer>
-  //         <ParallaxLayer offset={0} speed={1}>
-  //           <p>{eventData["description"]}</p>
-  //         </ParallaxLayer>
-  //       </Parallax>
-  //     )}
-  //   </>
-  // );
+
   return (
     <>
       {eventData && (
@@ -53,6 +37,10 @@ const Alter = () => {
             {workshops.map((w, i) => (
               <WorkShopCard key={i} workshop={w} />
             ))}
+          </div>
+          <div className="history"> 
+          <h3>Története</h3>
+          <HistoryParallax history={eventData.history}/>
           </div>
           <div className="videos">
             <iframe

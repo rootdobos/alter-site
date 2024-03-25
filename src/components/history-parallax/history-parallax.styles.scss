@@ -1,0 +1,35 @@
+.history-parallax-container {
+  .history-parallax {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    box-sizing: border-box;
+    position: relative;
+    height: 700px;
+    scroll-snap-type: y mandatory;
+    ::-webkit-scrollbar {
+      height: 5px;
+      width: 5px;
+      background: #fff3;
+      -webkit-border-radius: 1ex;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--accent);
+      -webkit-border-radius: 1ex;
+    }
+    ::-webkit-scrollbar-corner {
+      background: #fff3;
+    }
+  }
+
+  .progress-bar {
+    position: sticky;
+    top: 100%;
+    left: 0%;
+    right: 0%;
+    height: 10px;
+    background: #e0f1f8;
+    transform-origin: 0%;
+    z-index: 1000;
+  }
+}
