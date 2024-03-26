@@ -73,10 +73,7 @@ const Alter = () => {
               <WorkShopCard key={i} workshop={w} />
             ))}
           </motion.div>
-          <div className="history">
-            <h3>Története</h3>
-            <HistoryParallax history={eventData.history} />
-          </div>
+
           <div className="videos">
             <iframe
               width={vw * scale}
@@ -88,6 +85,10 @@ const Alter = () => {
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
+          </div>
+          <div className="history">
+            <h3>Története</h3>
+            <HistoryParallax history={eventData.history} />
           </div>
         </div>
       )}

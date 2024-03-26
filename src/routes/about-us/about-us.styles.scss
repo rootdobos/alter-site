@@ -1,0 +1,27 @@
+.about-us{
+    padding: 0 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .vision{
+        display: flex;
+        flex-direction: column;
+        p{
+            align-self: center;
+            font-size: 2.5em;
+        }
+        ul{
+            list-style-type: none;
+            font-size: 2em;
+            li{
+            margin: 60px 0;
+            }
+            li:nth-child(2n-1){
+                text-align: left;
+            }
+            li:nth-child(2n){
+                text-align: right;
+            }
+        }
+    }
+}

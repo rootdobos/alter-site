@@ -1,14 +1,45 @@
 .name-card{
     width: 400px;
     height: 200px;
+    
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 40% 60%;
+    color: black;
+    //border: 1px solid red;
+    background:  #e0f1f8;
+    h3{
+        font-size: 1.8em;
+        margin:0;
+        display: flex;
+        justify-content: center;
+    }
     img{
-        width: 100%;
+        width: 80%;
+        height:80%;
+        border-radius: 50%;
     }
     .contact-info{
+        height: 80%;
         flex: 1;
+        display: flex;
+        flex-direction: column;
+        h4{
+            margin:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div{
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            
+            align-items: center;
+        }
+
     }
 }

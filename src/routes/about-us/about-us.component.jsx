@@ -1,3 +1,4 @@
+import "./about-us.styles.scss"
 import MemberCard from "../../components/member-card/member-card.component";
 import { AppDataContext } from "../../contexts/app-data/app-data.context";
 import { useContext } from "react";
