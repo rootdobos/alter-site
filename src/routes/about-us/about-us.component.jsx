@@ -2,8 +2,21 @@ import "./about-us.styles.scss"
 import MemberCard from "../../components/member-card/member-card.component";
 import { AppDataContext } from "../../contexts/app-data/app-data.context";
 import { useContext } from "react";
+import { motion } from "framer-motion";
 const AboutUs = () => {
   const { members } = useContext(AppDataContext);
+  const visions=["    Kivánjuk a’ sajtó szabadságát, censura eltörlését.",
+  "Felelős ministeriumot Buda-Pesten.",
+  "Évenkinti országgyülést Pesten.",
+  "Törvény előtti egyenlőséget polgári és vallási tekintetben.",
+  "Nemzeti őrsereg.",
+  "Közös teherviselés.",
+  "Urbéri viszonyok megszüntetése.",
+  "Esküdtszék, képviselet egyenlőség alapján.",
+  "Nemzeti Bank.",
+  "A’ katonaság esküdjék meg az alkotmányra, magyar katonáinkat ne vigyék külföldre, a’ külföldieket vigyék el tőlünk.",
+  " A’ politikai statusfoglyok szabadon bocsáttassanak.",
+  " Unio."]
   return (
     <div className="about-us">
       <h3>A Szervezet</h3>
@@ -57,18 +70,17 @@ const AboutUs = () => {
         <h3>Víziónk</h3>
         <p>Mit kíván a magyar nemzet. Legyen béke, szabadság és egyetértés.</p>
         <ul>
-          <li>1. Kívánjuk a sajtó szabadságát, censura eltörlését.</li>
-          <li>2. Felelős ministeriumot Buda-Pesten.</li>
-          <li>3. Évenkinti országgyűlést Pesten</li>
-          <li>4. Törvény előtti egyenlőséget polgári és vallási tekintetben.</li>
-          <li>5. Nemzeti őrsereg.</li>
-          <li>6. Közös teherviselés.</li>
-          <li>7. Úrbéri viszonyok megszűntetése.</li>
-          <li>8. Esküdtszék, képviselet egyenlőség alapján.</li>
-          <li>9. Nemzeti Bank.</li>
-          <li>10. A katonaság esküdjék meg az alkotmányra, magyar katonáinkat ne vigyék külföldre, a külföldieket vigyék el tőlünk.</li>
-          <li>11. A politikai statusfoglyok szabadon bocsátassanak.</li>
-          <li>12. Unio.</li>
+          {visions.map((v,i)=>{
+            let params={opacity:0}
+            if(i%2===0) params={...params,x:100}
+            else params={...params,x:-100}
+            return <motion.li
+            initial={params}
+            whileInView={{opacity:1,x:0}}
+            viewport={{ once: true}}
+            transition={{duration:.5, delay:.2}}
+            >{`${i+1}. ${v}`}</motion.li>
+})}
         </ul>
         <p>Egyenlőség, szabadság, testvériség!</p>
       </div>
