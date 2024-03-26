@@ -1,16 +1,30 @@
 import "./main-title.styles.scss";
 import videoBg from "../../assets/intro.mp4";
 import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion";
 const MainTitle = () => {
   return (
     <div className="main-page-component">
-      <video src={videoBg} autoPlay loop muted />
-      <div className="main-page-headline">
+      <motion.video
+        src={videoBg}
+        autoPlay
+        loop
+        muted
+        disablePictureInPicture
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 3, ease: "easeOut" }}
+      />
+      <motion.div
+        className="main-page-headline"
+        initial={{ opacity: 0}}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut", delay:3 }}
+      >
         <Link className="navlink" to="/main">
           ALTERCREW
         </Link>
-      </div>
+      </motion.div>
     </div>
   );
 };
