@@ -24,11 +24,11 @@ const Alter = () => {
       {eventData && (
         <div className="event-details-container">
           <motion.h3
-            initial={{ opacity: 0.2, scale: 0.8 }}
+            initial={{ opacity: 0.2, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{
               type: "spring",
-              stiffness: 200,
+              stiffness: 50,
               duration: 1,
               delay: 0.1,
             }}

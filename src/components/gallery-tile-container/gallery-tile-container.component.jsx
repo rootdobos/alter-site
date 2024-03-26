@@ -42,12 +42,8 @@ const GalleryTileContainer = () => {
   if (gallery.length === 0) {
     return <div className="gallery-tile-container"></div>;
   }
-  let items = gallery;
-  if (slug) {
-    console.log(gallery)
-    console.log(slug)
-    items = getItemBySlug(gallery, slug);
-  }
+  let items = [];
+  items = getItemBySlug(gallery, slug);
   const previousLink = slug ? `${slug}-` : "";
   //return <></>
   return (

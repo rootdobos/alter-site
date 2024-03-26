@@ -10,9 +10,11 @@ export const slugify = (str) => {
 };
 
 export const getItemBySlug = (dict, slug) => {
-  const slugParts = slug.split("-");
+
   let result = dict;
   if (Object.keys(dict).length === 0) return [];
+  if(slug===undefined)return result
+  const slugParts = slug.split("-");
   slugParts.forEach((sp) => {
     result = result.filter((data) => slugify(data.title) === sp)[0];
     if (result.data) {
