@@ -72,6 +72,7 @@ const AboutUs = () => {
         </ul>
         <p>Egyenlőség, szabadság, testvériség!</p>
       </div>
+      <h3>A Szervezet Tagjai</h3>
       <div className="members">
         {members.map((member) => (
           <MemberCard key={member.id} member={member} />

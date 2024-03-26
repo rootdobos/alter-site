@@ -1,14 +1,38 @@
-.member-card{
-    width: 400px;
-    height: 200px;
-    display: flex;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    img{
-        width: 100%;
+.member-card {
+  width: 400px;
+    margin: 10px;
+    padding: 10px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(32, 32, 32);
+  img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+  }
+  .contact-info {
+    flex: 1;
+    h3 {
+      font-size: 2em;
+      margin: 0;
     }
-    .contact-info{
-        flex: 1;
+    h4 {
+      font-size: 1.2em;
+      text-align: center;
+      margin-top: 0;
     }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        font-size: 1em;
+        margin: 0;
+      }
+    }
+  }
 }
