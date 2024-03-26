@@ -7,7 +7,7 @@ import { useViewport } from "react-viewport-hooks";
 import WorkShopCard from "../../../components/workshop-card/workshop-card.component";
 import HistoryParallax from "../../../components/history-parallax/history-parallax.compoment";
 import { splitStringUsingRegex } from "../../../utils/ui/motion-helper";
-import { motion, stagger } from "framer-motion";
+import { motion } from "framer-motion";
 const Alter = () => {
   const { eventDetails } = useContext(AppDataContext);
   const { vw } = useViewport();
