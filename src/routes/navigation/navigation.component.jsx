@@ -1,6 +1,6 @@
 import { Fragment, useState, useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
-import logo from "../../assets/logo.svg";
+//import logo from "../../assets/logo.svg";
 import "./navigation.styles.scss";
 import { Menu, X } from "lucide-react";
 import { useMediaQuery, useMediaQueries } from "@react-hook/media-query";
@@ -16,7 +16,7 @@ const Navigation = () => {
     <Fragment>
       <div className="navigation">
         <Link className="logo-container" to="/">
-          <img className="main-logo" src={logo} alt="logo" />
+          <img className="main-logo" src="https://storage.googleapis.com/altercrew/assets/logo.svg" alt="logo" />
         </Link>
         {!matches && (
           <div onClick={toggleNavbar} className="navbar-button">
