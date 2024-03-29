@@ -8,9 +8,10 @@
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 40% 60%;
-    color: black;
     //border: 1px solid red;
-    background:  #e0f1f8;
+    border-radius: 40px;
+    background: linear-gradient(to right, #e0f1f862, rgb(0 0 0 /0% ) 30%),
+        linear-gradient(to left, #e0f1f862, rgb(0 0 0 /0% ) 30%);
     h3{
         font-size: 1.8em;
         margin:0;
