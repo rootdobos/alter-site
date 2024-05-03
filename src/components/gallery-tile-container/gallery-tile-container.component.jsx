@@ -4,7 +4,7 @@ import { useParams } from "react-router";
 import { AppDataContext } from "../../contexts/app-data/app-data.context";
 import { useContext, useState } from "react";
 import { getItemBySlug, slugify } from "../../utils/utils";
-
+import {  X } from "lucide-react";
 import GalleryTile from "../gallery-tile/gallery-tile.component";
 import { useSwipeable } from "react-swipeable";
 
@@ -48,11 +48,15 @@ const GalleryTileContainer = () => {
   //return <></>
   return (
     <>
-      {openedImage!==undefined && <div className="opened-image" onClick={closeOpenedImage}>
+      {openedImage!==undefined && (<>
+        <X className="close-button" size={30} onClick={closeOpenedImage}/>
+
+      <div className="opened-image" onClick={closeOpenedImage}>
+  
         <button onClick={decreaseOpenedImageID}>{"<"}</button>
         <img {...swipeHandlers} src={items[openedImage]} alt="" />
         <button onClick={increaseOpenedImageID}>{">"}</button>
-        </div>}
+        </div></>)}
 
       <div className="gallery-tile-container">
         {items.map((item, index) => {
