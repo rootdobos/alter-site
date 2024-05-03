@@ -9,22 +9,55 @@
       "https://gdb.rferl.org/7B99E979-1281-4B2E-96ED-13AB77D44509_w974_n_s.jpg"
     ],
     "description": "I'm baby lumbersexual gatekeep meditation freegan, la croix godard gastropub bodega boys bruh semiotics vexillologist tbh. Activated charcoal bicycle rights sriracha sartorial tofu four dollar toast craft beer. Snackwave marfa tattooed williamsburg umami venmo cardigan. Try-hard af whatever, edison bulb raclette squid drinking vinegar farm-to-table single-origin coffee grailed organic stumptown put a bird on it kickstarter pabst. Umami shabby chic synth hella, man bun poke bodega boys prism. Pickled post-ironic mustache mukbang normcore roof party portland organic ennui bushwick occupy. Brooklyn raw denim cronut same, tattooed synth kale chips celiac irony fashion axe small batch. Keytar forage art party, pinterest humblebrag truffaut glossier farm-to-table. Tacos shaman gastropub yuccie cronut cliche. Fixie cornhole franzen, af squid green juice single-origin coffee flexitarian brunch knausgaard live-edge sartorial intelligentsia kogi activated charcoal. Tousled twee typewriter, quinoa biodiesel ascot vice glossier actually raclette. Copper mug pop-up synth four dollar toast lyft, raclette craft beer YOLO glossier blue bottle shoreditch. Put a bird on it vice YOLO, chillwave pour-over DIY poutine yuccie. Bruh shaman vaporware echo park, DSA wayfarers single-origin coffee tousled.",
-    "thumbnails":[
+    "thumbnails": [
       "https://gorongosa.org/wp-content/uploads/2023/03/Wild-Camp-Olivier-Grunewald-05_crop.jpg",
       "https://campsummit.ca/wp-content/uploads/2022/09/east-village-2-scaled.jpg"
     ],
     "workshops": [
       {
         "title": "Painting",
-        "image": "https://www.kunstloft.com/wordpress/en_UK/eu/wp-content/uploads/2023/07/Painter-with-landscape-painting.jpg"
+        "image": "https://www.kunstloft.com/wordpress/en_UK/eu/wp-content/uploads/2023/07/Painter-with-landscape-painting.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "instructor": [
+          {
+            "name": "Kispál",
+            "image": "https://zene.hu/image/db_mazeszak/.640x640/12736.jpg"
+          },
+          {
+            "name": "Borz",
+            "image": "https://m.blog.hu/re/recorder/file/lovasi_andras_2.jpg"
+          }
+        ]
       },
       {
         "title": "Sculpture",
-        "image": "https://www.weltew.pk/cdn/shop/products/654_2_540x_13f28e2a-b953-45fa-b73a-88b427663177.jpg?v=1648558437"
+        "image": "https://www.weltew.pk/cdn/shop/products/654_2_540x_13f28e2a-b953-45fa-b73a-88b427663177.jpg?v=1648558437",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "instructor": [
+          {
+            "name": "Kispál",
+            "image": "https://zene.hu/image/db_mazeszak/.640x640/12736.jpg"
+          },
+          {
+            "name": "Borz",
+            "image": "https://m.blog.hu/re/recorder/file/lovasi_andras_2.jpg"
+          }
+        ]
       },
       {
         "title": "Media",
-        "image": "https://upload.wikimedia.org/wikipedia/en/2/29/On_the_Media_%28logo%29.png"
+        "image": "https://upload.wikimedia.org/wikipedia/en/2/29/On_the_Media_%28logo%29.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "instructor": [
+          {
+            "name": "Kispál",
+            "image": "https://zene.hu/image/db_mazeszak/.640x640/12736.jpg"
+          },
+          {
+            "name": "Borz",
+            "image": "https://m.blog.hu/re/recorder/file/lovasi_andras_2.jpg"
+          }
+        ]
       },
       {
         "title": "Printmaking",
@@ -96,21 +129,31 @@
     ],
     "description": "Powder chupa chups pudding lollipop apple pie pastry gingerbread carrot cake shortbread. Wafer candy pudding toffee halvah. Jelly-o soufflé jelly cheesecake oat cake. Cake sweet marzipan pudding cupcake candy candy canes cookie. Soufflé candy canes chocolate cake sweet tart cookie. Marzipan brownie gummies dragée brownie topping. Powder bear claw pastry ice cream gummies gummies dragée chocolate. Pudding cotton candy danish carrot cake caramels.",
     "programs": [
-      {"title":"Program 1",
-    "image":"https://source.unsplash.com/800x450",
-    "description":"Bacon ipsum dolor amet ribeye filet mignon sirloin tongue burgdoggen, beef ribs ham hock. Ball tip porchetta swine salami ground round doner ham. Prosciutto pork chop shankle fatback alcatra, pancetta brisket beef ribs. Chicken ham fatback sirloin. T-bone pastrami biltong ham hock, shoulder rump jerky drumstick chislic short loin ground round boudin strip steak."},
-    {"title":"Program 2",
-    "image":"https://source.unsplash.com/800x450",
-    "description":"Bacon ipsum dolor amet ribeye filet mignon sirloin tongue burgdoggen, beef ribs ham hock. Ball tip porchetta swine salami ground round doner ham. Prosciutto pork chop shankle fatback alcatra, pancetta brisket beef ribs. Chicken ham fatback sirloin. T-bone pastrami biltong ham hock, shoulder rump jerky drumstick chislic short loin ground round boudin strip steak."},
-    {"title":"Program 3",
-    "image":"https://source.unsplash.com/800x450",
-    "description":"Bacon ipsum dolor amet ribeye filet mignon sirloin tongue burgdoggen, beef ribs ham hock. Ball tip porchetta swine salami ground round doner ham. Prosciutto pork chop shankle fatback alcatra, pancetta brisket beef ribs. Chicken ham fatback sirloin. T-bone pastrami biltong ham hock, shoulder rump jerky drumstick chislic short loin ground round boudin strip steak."},
-    {"title":"Program 4",
-    "image":"https://source.unsplash.com/800x450",
-    "description":"Bacon ipsum dolor amet ribeye filet mignon sirloin tongue burgdoggen, beef ribs ham hock. Ball tip porchetta swine salami ground round doner ham. Prosciutto pork chop shankle fatback alcatra, pancetta brisket beef ribs. Chicken ham fatback sirloin. T-bone pastrami biltong ham hock, shoulder rump jerky drumstick chislic short loin ground round boudin strip steak."},
-    {"title":"Program 5",
-    "image":"https://source.unsplash.com/800x450",
-    "description":"Bacon ipsum dolor amet ribeye filet mignon sirloin tongue burgdoggen, beef ribs ham hock. Ball tip porchetta swine salami ground round doner ham. Prosciutto pork chop shankle fatback alcatra, pancetta brisket beef ribs. Chicken ham fatback sirloin. T-bone pastrami biltong ham hock, shoulder rump jerky drumstick chislic short loin ground round boudin strip steak."}
+      {
+        "title": "Program 1",
+        "image": "https://source.unsplash.com/800x450",
+        "description": "Bacon ipsum dolor amet ribeye filet mignon sirloin tongue burgdoggen, beef ribs ham hock. Ball tip porchetta swine salami ground round doner ham. Prosciutto pork chop shankle fatback alcatra, pancetta brisket beef ribs. Chicken ham fatback sirloin. T-bone pastrami biltong ham hock, shoulder rump jerky drumstick chislic short loin ground round boudin strip steak."
+      },
+      {
+        "title": "Program 2",
+        "image": "https://source.unsplash.com/800x450",
+        "description": "Bacon ipsum dolor amet ribeye filet mignon sirloin tongue burgdoggen, beef ribs ham hock. Ball tip porchetta swine salami ground round doner ham. Prosciutto pork chop shankle fatback alcatra, pancetta brisket beef ribs. Chicken ham fatback sirloin. T-bone pastrami biltong ham hock, shoulder rump jerky drumstick chislic short loin ground round boudin strip steak."
+      },
+      {
+        "title": "Program 3",
+        "image": "https://source.unsplash.com/800x450",
+        "description": "Bacon ipsum dolor amet ribeye filet mignon sirloin tongue burgdoggen, beef ribs ham hock. Ball tip porchetta swine salami ground round doner ham. Prosciutto pork chop shankle fatback alcatra, pancetta brisket beef ribs. Chicken ham fatback sirloin. T-bone pastrami biltong ham hock, shoulder rump jerky drumstick chislic short loin ground round boudin strip steak."
+      },
+      {
+        "title": "Program 4",
+        "image": "https://source.unsplash.com/800x450",
+        "description": "Bacon ipsum dolor amet ribeye filet mignon sirloin tongue burgdoggen, beef ribs ham hock. Ball tip porchetta swine salami ground round doner ham. Prosciutto pork chop shankle fatback alcatra, pancetta brisket beef ribs. Chicken ham fatback sirloin. T-bone pastrami biltong ham hock, shoulder rump jerky drumstick chislic short loin ground round boudin strip steak."
+      },
+      {
+        "title": "Program 5",
+        "image": "https://source.unsplash.com/800x450",
+        "description": "Bacon ipsum dolor amet ribeye filet mignon sirloin tongue burgdoggen, beef ribs ham hock. Ball tip porchetta swine salami ground round doner ham. Prosciutto pork chop shankle fatback alcatra, pancetta brisket beef ribs. Chicken ham fatback sirloin. T-bone pastrami biltong ham hock, shoulder rump jerky drumstick chislic short loin ground round boudin strip steak."
+      }
     ]
   },
   "miccsezes": {

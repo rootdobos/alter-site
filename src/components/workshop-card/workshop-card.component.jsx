@@ -1,8 +1,11 @@
 import "./workshop-card.styles.scss";
 import { motion } from "framer-motion";
-const WorkShopCard = ({ workshop }) => {
+const WorkShopCard = ({ workshop,viewHandler }) => {
+  const onClickHandler = () => {
+    viewHandler(workshop);
+  };
   return (
-    <motion.div
+    <motion.div onClick={onClickHandler}
       className="workshop-card"
       initial={{ opacity: 0,scale:0 }}
       whileInView={{ opacity: 1 ,scale:1}}

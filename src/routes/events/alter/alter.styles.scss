@@ -1,3 +1,51 @@
+.close-button{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  &:hover{
+    cursor: pointer;
+  }
+}
+.opened-workshop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Adjust opacity as needed */
+  z-index: 9998; /* Ensure it's above other elements */
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+  .opened-workshop-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    img{
+      height: 100px;
+    }
+  }
+  h3{
+    //margin: 0;
+  }
+  p{
+    width: 80%;
+  }
+
+  .instructors-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    img{
+      width: 300px;
+    }
+  }
+}
 .event-details-container {
   color: white;
   background: black;
