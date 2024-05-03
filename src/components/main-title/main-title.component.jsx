@@ -1,12 +1,13 @@
 import "./main-title.styles.scss";
-//import videoBg from "../../assets/alter_intro.mp4";
+import videoBg from "../../assets/alter_intro.mp4";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 const MainTitle = () => {
   return (
     <div className="main-page-component">
       <motion.video
-        src="https://storage.googleapis.com/altercrew/assets/alter_intro.mp4"
+        // src="https://storage.googleapis.com/altercrew/assets/alter_intro.mp4"
+        src={videoBg}
         autoPlay
         loop
         muted

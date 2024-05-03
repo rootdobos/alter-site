@@ -18,6 +18,8 @@ const Alter = () => {
   };
   const eventData = eventDetails["alter"];
   const workshops = eventData && eventData["workshops"];
+  const history = eventData && eventData["history"];
+  const thumbnails = eventData && eventData["thumbnails"];
   const splittedDescription = splitStringUsingRegex(eventData?.description);
   return (
     <>
@@ -37,6 +39,7 @@ const Alter = () => {
             {eventData.title}
           </motion.h3>
           <motion.p
+            className="description"
             initial="hidden"
             whileInView="reveal"
             viewport={{ once: true }}
@@ -53,19 +56,30 @@ const Alter = () => {
               </motion.span>
             ))}
           </motion.p>
-          <Carousel
-            className="event-detail-carousel"
-            infiniteLoop={true}
-            autoPlay={true}
-            showThumbs={false}
-            showStatus={false}
-          >
-            {eventData.imageUrl.map((image, index) => (
-              <div>
-                <img src={image} alt={eventData.title + index} />
-              </div>
-            ))}
-          </Carousel>
+          <div className="template-images">
+            {
+              thumbnails.map((t,i)=>(
+                <motion.img
+                initial={{
+                  y: 100,
+                  opacity:0,
+                  scale:0.5
+                }}
+                whileInView={{
+                  y: 0,
+                  opacity:1,
+                  scale:1,
+                  transition: {
+                    type: "spring",
+                    bounce: 0.4,
+                    duration: 1,
+                  },
+                }}
+                viewport={{ once: true, amount: 0.8 }}
+                src={t} alt="thumbnail" id={i} />
+              ))
+            }
+          </div>
           <h3>Műhelyek</h3>
           <motion.div className="workshop-container"
            transition={{ staggerChildren: 0.01}}>
@@ -88,7 +102,7 @@ const Alter = () => {
           </div>
           <div className="history">
             <h3>Története</h3>
-            <HistoryParallax history={eventData.history} />
+            <HistoryParallax history={history} />
           </div>
         </div>
       )}
