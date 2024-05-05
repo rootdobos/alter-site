@@ -7,9 +7,9 @@ import { useViewport } from "react-viewport-hooks";
 import WorkShopCard from "../../../components/workshop-card/workshop-card.component";
 import HistoryParallax from "../../../components/history-parallax/history-parallax.compoment";
 import { splitStringUsingRegex } from "../../../utils/ui/motion-helper";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import {  X } from "lucide-react";
+import { X } from "lucide-react";
 const Alter = () => {
   const { eventDetails } = useContext(AppDataContext);
   const { vw } = useViewport();
@@ -33,27 +33,40 @@ const Alter = () => {
   const splittedDescription = splitStringUsingRegex(eventData?.description);
   return (
     <>
-      {openedWorkShop !== undefined && (
-        <>
-        <X className="close-button" size={30} onClick={closeOpenedWorkShop}/>
-        <div className="opened-workshop" onClick={closeOpenedWorkShop}>
-          <div className="opened-workshop-title">
-            <img src={openedWorkShop["image"]} alt={openedWorkShop["title"]} />
-            <h3>{openedWorkShop["title"]}</h3>
-          </div>
+      <AnimatePresence>
+        {openedWorkShop !== undefined && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="opened-workshop"
+            onClick={closeOpenedWorkShop}
+          >
+            <X
+              className="close-button"
+              size={30}
+              onClick={closeOpenedWorkShop}
+            />
+            <div className="opened-workshop-title">
+              <img
+                src={openedWorkShop["image"]}
+                alt={openedWorkShop["title"]}
+              />
+              <h3>{openedWorkShop["title"]}</h3>
+            </div>
 
-          <p>{openedWorkShop["description"]}</p>
-          <div className="instructors-container">
-            {openedWorkShop["instructor"].map((instructor, index) => (
-              <div className="instructor">
-                <img src={instructor["image"]} alt="" />
-                <h4>{instructor["name"]}</h4>
-              </div>
-            ))}
-          </div>
-        </div>
-        </>
-      )}
+            <p>{openedWorkShop["description"]}</p>
+            <div className="instructors-container">
+              {openedWorkShop["instructor"].map((instructor, index) => (
+                <div className="instructor">
+                  <img src={instructor["image"]} alt="" />
+                  <h4>{instructor["name"]}</h4>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       {eventData && (
         <div className="event-details-container">
           <motion.h3
